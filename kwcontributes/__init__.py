@@ -10,7 +10,7 @@ DEFAULT_URL = "amqp://guest:guest@localhost:5672"
 
 app = Celery('kwcontributes',
              backend='amqp',
-             broker=os.environ['BROKER_UER'] if "BROKER_URL" in os.environ.keys() else DEFAULT_URL,
+             broker=os.environ['BROKER_URL'] if "BROKER_URL" in os.environ.keys() else DEFAULT_URL,
              include=INCLUDES
 )
 
